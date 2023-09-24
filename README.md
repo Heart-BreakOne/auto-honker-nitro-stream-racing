@@ -1,4 +1,6 @@
- # Adding an auto honker feature for The Nitro Stream Racing Continue Clicker extension for Chrome.
+ # Adding an automated in-race features for The Nitro Stream Racing Continue Clicker extension for Chrome.
+
+Honks<br>Use megas<br>Use power-ups
 
 Unfortunately the extension doesn't have a license and no github repo so the entire extension can't be reshared, but nothing prevents you as the user from editing it on your local machine.
 
@@ -20,4 +22,4 @@ Chromium: ~/.config/chromium/Default/Extensions/plojjdlfbkdogleihmciggfiddccllmb
 https://webkul.com/blog/how-to-install-the-unpacked-extension-in-chrome/
 
 
-### Keep in mind that your edited extension won't be able to receive official updates, so you have to do that manually, make sure to backup or edits before doing so or they will be lost.
+### Keep in mind that your edited extension won't be able to receive official updates, so you have to do that manually, make sure to backup your edits before doing so or they will be lost.
