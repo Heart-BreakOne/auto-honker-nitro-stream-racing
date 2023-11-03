@@ -1,14 +1,19 @@
-/* Instructions on the README file of this repository */
-/* Add this bit of code to the end of the script.js file */
-
-setInterval(useMega, 5000);
+let activeRace;
 setInterval(usePowerUps, 5000);
 setInterval(honk, 17000);
-let activeRace;
+setInterval(collect, 2000);
+
+//Claims race reward
+function collect() {
+  const button = document.getElementById("claimButton");
+  if (button) {
+    button.click();
+    activeRace = false
+  }
+}
 
 // The honk only counts once every 15 seconds or so, so a 17 seconds timer shouldn't have any issues.
 function honk() {
-  activeRace = document.querySelector(".activeRaceItem");
   if (activeRace) {
     const honkButton = document.querySelector(".actionButton");
     if (honkButton)
@@ -16,24 +21,17 @@ function honk() {
   }
 }
 
-// Use all power ups available
+// Use all power ups and megas available
 function usePowerUps() {
-  if (activeRace) {
-    const powerUpButtons = document.querySelectorAll('.cursor-pointer.font-bold');
-    if (powerUpButtons) {
-      powerUpButtons.forEach(button => {
-        button.click();
-      });
-    }
-  }
-}
-
-//Use megas if available
-function useMega() {
+  activeRace = document.querySelector(".activeRaceItem");
   if (activeRace) {
     const megaButton = document.querySelector('.ml-4');
     if (megaButton) {
       megaButton.click();
     }
+    const powerUpButtons = document.querySelectorAll('.cursor-pointer.font-bold');
+    powerUpButtons.forEach(button => {
+      button.click();
+    });
   }
 }

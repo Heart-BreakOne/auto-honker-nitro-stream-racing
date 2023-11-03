@@ -1,0 +1,20 @@
+{
+   "manifest_version": 3,
+   "name": "AutoNitro",
+   "version": "0.0.1",
+   "description": "Races, honks, power ups and megas",
+   "icons": {
+      "128": "icons/icon-128.png",
+      "48": "icons/icon-48.png"
+   },
+   "content_scripts": [
+      {
+         "js": [
+            "script.js"
+         ],
+         "matches": [
+            "https://game.playnitro.com/*"
+         ]
+      }
+   ]
+}
